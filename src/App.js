@@ -7,23 +7,24 @@ const API_URL = "https://v2.jokeapi.dev/joke/Programming?amount=10";
 function App() {
   const [jokes, setJokes] = useState([]);
 
-  const impJokes = async (title) => {
-    const response = await fetch(`${API_URL}`);
+  const getJokes = async () => {
+    const response = await fetch(API_URL);
     const data = await response.json();
-    setJokes(data.Jokes);
+    setJokes(data);
+    console.log(data);
   };
 
   useEffect(() => {
-    impJokes();
+    getJokes();
   }, []);
 
   return (
     <div className="App">
-      <header className="App-header">joke-on-you</header>
+      <h1>joke-on-you</h1>
       {jokes?.length > 0 ? (
         <div className="container">
           {jokes.map((joke) => (
-            <JokeCard joke={joke} />
+            <JokeCard key={joke.id} joke={joke} />
           ))}
         </div>
       ) : (
