@@ -18,6 +18,14 @@ body {
   flex-direction: column;
 }
 
+h1 {
+  font-size: 3rem;
+  margin: 3px auto;
+  letter-spacing: 0.9px;
+  color: rgba(249, 211, 180, 1);
+  width: fit-content;
+}
+
 .container {
   width: 100%;
   margin-top: 3rem;
@@ -32,36 +40,9 @@ body {
   width: 310px;
   height: 460px;
   margin: 1.5rem;
-
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   border: none;
-
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
