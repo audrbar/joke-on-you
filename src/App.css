@@ -6,12 +6,11 @@
 
 body {
   font-family: var(--font-roboto);
-  background-color: #212426;
+  background-color:darkcyan;
 }
 
 .app {
   padding: 4rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,28 +20,29 @@ body {
 h1 {
   font-size: 3rem;
   margin: 3px auto;
+  padding: 5px;
   letter-spacing: 0.9px;
   color: rgba(249, 211, 180, 1);
   width: fit-content;
 }
 
 .container {
-  width: 100%;
-  margin-top: 3rem;
-  border: 2px solid red;
+  max-width: 1000px;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.movie {
+.joke {
   width: 310px;
-  height: 460px;
-  margin: 1.5rem;
-  position: relative;
-  border-radius: 12px;
+  min-height: 350px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
   overflow: hidden;
+  background-color: cadetblue;
   border: none;
 }
 
