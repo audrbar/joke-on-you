@@ -9,14 +9,15 @@ function App() {
 
   const getJokes = async () => {
     const response = await fetch(API_URL);
+    /** @type {{ error: boolean, amount: number, jokes: any[] }} */
     const data = await response.json();
-    setJokes(data);
+    setJokes(data.jokes);
     console.log(data);
   };
 
   useEffect(() => {
     getJokes();
-  }, []);
+  }, [setJokes]);
 
   return (
     <div className="App">
